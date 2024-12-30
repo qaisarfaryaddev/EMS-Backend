@@ -5,7 +5,7 @@ const router = express.Router();
 
 // Apply authenticate middleware to specific routes
 router.get('/',authenticate,  (req:Request, res:Response) => {
-  res.send('Authenticated successfully');
+  res.status(200).json({ success: true, message: "Authenticated" });
 });
 
 export default router;

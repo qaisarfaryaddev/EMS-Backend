@@ -1,18 +1,26 @@
 import express, { Request, Response, Application, NextFunction } from 'express';
 import cors from 'cors';
 import router from './routes'
+import cookieParser from 'cookie-parser';
 
 const app: Application = express();
 
 
-// parse json request body
-app.use(express.json());
-app.use(cors());
 
-// Other middleware and routes
+app.use(express.json());
+const corsOptions = {
+    origin: 'http://localhost:5173',  
+    credentials: true,  
+};
+
+app.use(cors(corsOptions));
+
+app.use(cookieParser());
+
+
+
 app.use(express.json());
 
-// parse urlencoded request body
 app.use(express.urlencoded({ extended: true }));
 // app.use(cookieParser());
 

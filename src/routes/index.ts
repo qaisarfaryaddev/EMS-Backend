@@ -12,7 +12,7 @@ const defaultRoute = [
         route: loginRoute
     },
     {
-        path:'auth/check',
+        path:'/auth-check',
         route:authCheck
     },
     {
