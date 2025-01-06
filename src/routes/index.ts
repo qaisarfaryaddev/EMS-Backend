@@ -2,6 +2,8 @@ import express from 'express';
 import loginRoute from './login.route';
 import logoutRoute from './logout.route';
 import authCheck from './authCheck.route';
+import addEmploye from './addEmploye.route';
+import  getEmploye  from './getEmployes.route';
 
 
 const router = express.Router();
@@ -14,6 +16,14 @@ const defaultRoute = [
     {
         path:'/auth-check',
         route:authCheck
+    },
+    {
+        path:'/addEmploye',
+        route:addEmploye
+    },
+    {
+        path:'/getEmploye',
+        route:getEmploye
     },
     {
         path:'/logout',

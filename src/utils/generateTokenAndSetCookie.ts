@@ -19,7 +19,7 @@ export const generateTokenAndSetCookie = (
 
     res.cookie("token", token, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === "production", // True in production
+        secure: process.env.NODE_ENV === "production", 
         sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
         maxAge: 3600000, // 1 hour in milliseconds
     });
