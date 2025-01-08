@@ -2,10 +2,10 @@ import { Request, Response } from 'express';
 import { AddEmployeModel } from '../models/index';
 
 export const addEmployeController = async (req: Request, res: Response): Promise<any> => {
-    const { employeName, designation, batch, phoneNumber, posting } = req.body;
+    const { employeName, designation, batch, phoneNumber, posting, shift } = req.body;
 
     try {
-        if (!employeName || !designation || !batch || !phoneNumber || !posting) {
+        if (!employeName || !designation || !batch || !phoneNumber || !posting || !shift) {
             return res.status(422).json({
                 success: false,
                 message: "All fields are required.",
@@ -18,6 +18,7 @@ export const addEmployeController = async (req: Request, res: Response): Promise
             batch,
             phoneNumber,
             posting,
+            shift
         });
 
         await newEmployee.save();

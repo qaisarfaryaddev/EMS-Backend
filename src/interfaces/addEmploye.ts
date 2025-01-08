@@ -4,4 +4,5 @@ export interface AddEmploye{
     batch:string,
     phoneNumber:string,
     posting:string
+    shift:string
 }
