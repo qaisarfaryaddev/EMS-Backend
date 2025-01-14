@@ -11,7 +11,10 @@ const addEmployeSchema = new Schema<Document & AddEmploye>({
     batch:{type:String, required:true},
     phoneNumber: {type:String, required:true},
     posting:{type:String, required:true},
-    shift:{type:String, required:true}
-});
+    shift:{type:String, required:true},
+    
+},
+{ timestamps: true }
+);
 
 export const AddEmployeModel = mongoose.model<Document & AddEmploye>('addEmploye', addEmployeSchema);

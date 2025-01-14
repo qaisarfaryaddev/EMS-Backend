@@ -3,7 +3,7 @@ import { AddEmployeModel } from '../models/index';
 
 export const getEmploye = async (req: Request, res: Response): Promise<any> => {
   try {
-    const employees = await AddEmployeModel.find();
+    const employees = await AddEmployeModel.find().sort({ createdAt: -1 });;
 
     const designationCounts = await AddEmployeModel.aggregate([
       {
