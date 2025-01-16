@@ -9,7 +9,8 @@ const app: Application = express();
 
 app.use(express.json());
 const corsOptions = {
-    origin: 'http://localhost:5173',  
+    // origin: 'http://localhost:5173',  
+    origin: 'https://frontdeskmanagementsystem.vercel.app',  
     credentials: true,  
 };
 
