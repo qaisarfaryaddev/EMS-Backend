@@ -4,6 +4,7 @@ import logoutRoute from './logout.route';
 import authCheck from './authCheck.route';
 import addEmploye from './addEmploye.route';
 import  getEmploye  from './getEmployes.route';
+import test from './test.route'
 
 
 const router = express.Router();
@@ -24,6 +25,10 @@ const defaultRoute = [
     {
         path:'/getEmploye',
         route:getEmploye
+    },
+    {
+        path:'/test',
+        route:test
     },
     {
         path:'/logout',
