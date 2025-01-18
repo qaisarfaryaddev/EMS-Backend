@@ -27,10 +27,6 @@ const defaultRoute = [
         route:getEmploye
     },
     {
-        path:'/test',
-        route:test
-    },
-    {
         path:'/logout',
         route: logoutRoute
     }
