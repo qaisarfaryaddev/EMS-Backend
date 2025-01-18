@@ -9,7 +9,7 @@ const app: Application = express();
 
 app.use(express.json());
 const corsOptions = {
-    origin: 'https://frontdeskmanagementsystem-qaisars-projects-3cad2971.vercel.app',  
+    origin: 'https://frontdesk-gamma.vercel.app',  
     credentials: true,  
 };
 
