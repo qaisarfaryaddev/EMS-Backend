@@ -22,6 +22,7 @@ export const generateTokenAndSetCookie = (
         secure: true, 
         sameSite: "none",
         maxAge: 3600000, // 1 hour in milliseconds
+        domain:'frontdesk-gamma.vercel.app'
     });
 
     return token;
