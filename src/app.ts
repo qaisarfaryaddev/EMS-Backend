@@ -9,8 +9,7 @@ const app: Application = express();
 
 app.use(express.json());
 const corsOptions = {
-    //origin: 'http://localhost:5173',  
-    origin: 'https://frontdeskmanagementsystem.vercel.app',  
+    origin: 'https://frontdeskmanagementsystem-qaisars-projects-3cad2971.vercel.app',  
     credentials: true,  
 };
 
