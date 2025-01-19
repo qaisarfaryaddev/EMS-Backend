@@ -20,9 +20,8 @@ export const generateTokenAndSetCookie = (
     res.cookie("token", token, {
         httpOnly: true,
         secure: true, 
-        sameSite: "none",
-        maxAge: 3600000, // 1 hour in milliseconds
-        // domain:'frontdesk-gamma.vercel.app'
+        sameSite: "lax",
+        maxAge: 3600000, 
     });
 
     return token;
